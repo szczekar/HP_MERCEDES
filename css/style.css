@@ -1,6 +1,5 @@
 /* Resetujemy domyślne ustawienia w przeglądarce */
 
-
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +13,77 @@
 }
 
 
+:root {
+  --navHeight: 620px;
+  --headerHeight: 119px;
+}
 
-header div img {
+/*SEKCJA 1  - TOP - header baner */
+
+header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: grey;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+
+}
+
+
+
+header img {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+nav img {
   max-width: 100%;
   height: auto;
 }
 
 
+header .top {
+  /*  position: fixed;*/
+  max-width: 1920px;
+  /*
+  margin: 0 auto;
+  text-align: center;
+*/
+  background-color: grey;
+  z-index: 1;
+  /*
+  top: 0;
+  left: 0;
+*/
+}
+
+nav {
+  top: 119;
+  left: 0;
+  /*  margin-top: 119px;*/
+}
+
+nav .navigation {
+  max-width: 100%;
+  max-height: 620px;
+  margin: 0 auto;
+  text-align: center;
+  /*  z-index: -1;*/
+  /*  position: relative;*/
+  top: 0;
+  left: 0;
+
+
+}
+
+
+
+/*
 .container {
   max-width: 1920px;
   max-height: 616px;
@@ -29,19 +92,21 @@ header div img {
   text-align: center;
   padding-top: 5px;
 }
+*/
 
 
+span::first-letter {
+  font-weight: bold;
+}
 
 
-
-/* Sekcja 1 - NAPRAWA ZABYTKOWYCH I WSPÓŁCZESNYCH MERCEDESÓW */
+/* Sekcja 2 - NAPRAWA ZABYTKOWYCH I WSPÓŁCZESNYCH MERCEDESÓW */
 
 .features {
   max-width: 1600px;
   margin: 5px auto 0;
   padding: 1%;
   text-align: center;
-
 }
 
 .features h1 {
@@ -67,7 +132,7 @@ header div img {
 
 .features img {
   width: 100%;
-  margin: 5px 0;
+  margin: 15px 0;
   max-width: 375px;
   border: 1px solid black;
 }
@@ -165,7 +230,7 @@ header div img {
   }
 }
 
-/*SEKCJA PORTFOLIO -  PRZYKŁADOWE NAPRAWY */
+/*SEKCJA 3 - PORTFOLIO -  PRZYKŁADOWE NAPRAWY */
 
 .portfolio {
   background-color: black;
@@ -300,7 +365,7 @@ header div img {
   }
 }
 
-/*SEKCJA CONTACT */
+/*SEKCJA 4 -  CONTACT */
 
 .contact {
   background-color: #000;
@@ -361,7 +426,6 @@ header div img {
 }
 
 
-
 footer {
   background-color: grey;
   color: black;
@@ -369,6 +433,10 @@ footer {
   text-align: center;
   padding: 5px;
   font-size: 20px;
+}
+
+footer::first-letter {
+  font-weight: bold;
 }
 
 
@@ -440,23 +508,28 @@ footer {
     width: 50%;
     margin: 0 auto;
   }
+}
 
-  @media (min-width: 1600px) {
+@media (min-width: 1600px) {
 
-    .contact h1 {
-      font-size: 60px;
-      padding: 30px 0;
-    }
+  .contact h1 {
+    font-size: 60px;
+    padding: 30px 0;
+  }
 
 
-    .contact h6 {
-      font-size: 26px;
-    }
+  .contact h6 {
+    font-size: 26px;
+  }
 
-    .contact .socials span {
-      font-size: 24px;
-    }
+  .contact .socials;
 
-    footer {
-      font-size: 20px;
-    }
+  span {
+    font-size: 24px;
+  }
+
+  footer {
+    font-size: 20px;
+  }
+
+}
