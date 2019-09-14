@@ -13,10 +13,12 @@
 }
 
 
+/*
 :root {
   --navHeight: 620px;
   --headerHeight: 119px;
 }
+*/
 
 /*SEKCJA 1  - TOP - header baner */
 
@@ -29,7 +31,6 @@ header {
   margin: 0 auto;
   width: 100%;
   height: auto;
-
 }
 
 
@@ -37,68 +38,105 @@ header {
 header img {
   max-width: 100%;
   height: auto;
+  padding-top: 10px;
   text-align: center;
   margin: 0 auto;
-}
-
-nav img {
-  max-width: 100%;
-  height: auto;
 }
 
 
 header .top {
-  /*  position: fixed;*/
   max-width: 1920px;
-  /*
-  margin: 0 auto;
-  text-align: center;
-*/
   background-color: grey;
   z-index: 1;
-  /*
+}
+
+aside img {
+  width: 100%;
+  height: auto;
+
+}
+
+aside .top2 {
+  /*  position: relative;*/
+/*  max-width: 100%;*/
+  /*  max-height: 620px;*/
+/*
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
   top: 0;
   left: 0;
 */
 }
+
 
 nav {
-  top: 119;
-  left: 0;
-  /*  margin-top: 119px;*/
-}
-
-nav .navigation {
   max-width: 100%;
-  max-height: 620px;
-  margin: 0 auto;
-  text-align: center;
-  /*  z-index: -1;*/
-  /*  position: relative;*/
-  top: 0;
-  left: 0;
-
-
+  height: auto;
+  background-color: gray;
+  /*  position: fixed;*/
 }
 
-
-
-/*
-.container {
-  max-width: 1920px;
-  max-height: 616px;
-  margin: 0 auto;
-  background-color: grey;
-  text-align: center;
-  padding-top: 5px;
-}
+nav a {
+  display: inline-block;
+  /*
+  margin: 5px 15px;
+  padding: 10px;
 */
+  border: 1px solid black;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  /*  font-size: 16px;*/
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
 
+nav a:hover {
+  color: white;
+  border: 1px solid white;
+  font-weight: normal;
+}
 
 span::first-letter {
   font-weight: bold;
 }
 
+@media(min-width:360px) {
+  nav a {
+    margin: 2px 8px;
+    padding: 4px;
+    font-size: 10px;
+
+  }
+}
+
+@media(min-width:768px) {
+  nav a {
+    margin: 2px 10px;
+    padding: 6px;
+    font-size: 12px;
+
+  }
+}
+
+@media(min-width:1024px) {
+  nav a {
+    margin: 4px 8px;
+    padding: 8px;
+    font-size: 14px;
+
+  }
+}
+
+@media(min-width:1600px) {
+  nav a {
+    margin: 4px 16px;
+    padding: 10px;
+    font-size: 16px;
+
+  }
+}
 
 /* Sekcja 2 - NAPRAWA ZABYTKOWYCH I WSPÓŁCZESNYCH MERCEDESÓW */
 
@@ -187,6 +225,7 @@ span::first-letter {
 
   .features h1 {
     font-size: 36px;
+    margin-bottom: 45px;
   }
 
   .features h2 {
@@ -234,7 +273,8 @@ span::first-letter {
 
 .portfolio {
   background-color: black;
-  padding: 10px 0 30px;
+  padding: 15px 0 30px;
+  margin-top: 40px;
 }
 
 .portfolio h1 {
@@ -243,7 +283,7 @@ span::first-letter {
   text-transform: uppercase;
   color: white;
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 30px;
   margin-bottom: 15px;
 }
 
@@ -252,7 +292,7 @@ span::first-letter {
 }
 
 .portfolio .about {
-  color: white;
+  color: black;
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
   padding: 10px 20px 20px 0;
@@ -278,11 +318,11 @@ span::first-letter {
 }
 
 .portfolio .project:nth-of-type(odd) {
-  background-color: grey;
+  background-color: white;
 }
 
 .portfolio .project:nth-of-type(even) {
-  background-color: grey;
+  background-color: white;
 }
 
 @media (min-width:768px) {
@@ -304,6 +344,17 @@ span::first-letter {
   .portfolio .project {
     margin-bottom: 40px;
   }
+
+}
+
+@media (min-width:1024px) {
+
+  .portfolio h1 {
+    font-size: 45px;
+    padding: 20px 30px;
+
+  }
+
 
 }
 
@@ -376,7 +427,7 @@ span::first-letter {
   font-family: 'Roboto', sans-serif;
   font-size: 26px;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   color: white;
   text-align: center;
 }
@@ -386,7 +437,7 @@ span::first-letter {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: white;
   text-align: center;
 
@@ -451,10 +502,12 @@ footer::first-letter {
 
   .contact h1 {
     font-size: 16px;
+    margin-bottom: 35px;
   }
 
   .contact h6 {
-    font-size: 14px;
+    font-size: 12px;
+    margin-bottom: 5px 0;
   }
 }
 
@@ -464,8 +517,14 @@ footer::first-letter {
     width: 75%;
   }
 
+  .contact h1 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
   .contact h6 {
     font-size: 16px;
+    margin-bottom: 5px 0;
   }
 
   .contact .socials span {
@@ -475,6 +534,19 @@ footer::first-letter {
   footer {
     font-size: 14px;
   }
+}
+
+@media (min-width:768px) {
+  .contact h1 {
+    font-size: 20px;
+    margin-bottom: 65px;
+  }
+
+  .contact h6 {
+    font-size: 18px;
+    margin-bottom: 5px 0;
+  }
+
 }
 
 @media (min-width: 1024px) {

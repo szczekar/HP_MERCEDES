@@ -33,22 +33,23 @@
   <!-- /*SEKCJA 1  - TOP - header baner */ -->
 
   <header class="top">
-    <!--    <div class="container">-->
-    <img src="images/hpxmerc.jpg" alt="baner logo">
-    <!--    </div>-->
+    <img src="images/hpxmerc.jpg" alt="baner logo" />
+    <nav>
+      <a class="zakres" href="#">Zakres napraw</a>
+      <a class="przykladowe" href="#">Przykładowe naprawy</a>
+      <a class="kontakt" href="#">Kontakt</a>
+    </nav>
   </header>
-  <nav class="navigation">
-    <img src="images/licznik1_1920.jpg" alt="licznik mercedesa">
-  </nav>
-  <!--    <div class="container">-->
-  <!--      <img src="images/licznik1_1920.jpg" alt="licznik mercedesa">-->
-  <!--    </div>-->
-  <!--  </header>-->
+
+  <aside class="top2">
+    <img src="images/licznik1_1920.jpg" alt="licznik mercedesa" />
+  </aside>
+
 
 
   <!-- Sekcja 2 - NAPRAWA ZABYTKOWYCH I WSPÓŁCZESNYCH MERCEDESÓW -->
 
-  <section class="features clearfix">
+  <section data-section="zakres" id="zakres" class="features clearfix">
     <h1>Naprawa zabytkowych i współczesnych mercedesów</h1>
     <div class="feature">
       <img src="images/silnikMerc.JPG" alt="silnik mercedesow">
@@ -90,9 +91,11 @@
   </section>
 
 
+
+
   <!-- SEKCJA 3 - PORTFOLIO -  PRZYKŁADOWE NAPRAWY  -->
 
-  <section class="portfolio">
+  <section data-section="przykladowe" id="przykladowe" class="portfolio">
     <h1>Przykładowe naprawy</h1>
     <div class="project clearfix">
       <div class="web">
@@ -114,9 +117,11 @@
     </div>
   </section>
 
+
+
   <!-- SEKCJA 4 -  CONTACT   -->
 
-  <section class="contact">
+  <section data-section="kontakt" id="kontakt" class="contact">
     <h1>Skontaktuj się ze mną</h1>
     <h6>ul. Krzywolaków 6 <br>Kaniów 43-512<br>śląskie (powiat bielski)</h6>
     <div class="wrap clearfix">
@@ -129,8 +134,25 @@
   <div class="map-responsive">
     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d9158.701599045075!2d19.021306965997034!3d49.853902065682554!2m2!1f6.424528447921375!2f43.580431742951255!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x4716a3332d7534a1%3A0xb25d3b200a4ee2b3!2sKrzywolak%C3%B3w+6%2C+43-514+Kani%C3%B3w!5e1!3m2!1spl!2spl!4v1559238738816!5m2!1spl!2spl" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
+
+
   <footer>&copy;Hernas Paweł 2019
   </footer>
+
+
+  <!--  skrypty java script , jquery -->
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+    /* skrypt w jquery odpowiadający za przewijanie strony do odpowiedniej sekcji po kliknieciu buttona */
+
+    $('nav a').on('click', function() {
+      const goToSection = "[data-section=" + $(this).attr('class') + "]";
+      $('body, html').animate({
+        scrollTop: $(goToSection).offset().top - 130
+      })
+    })
+
+  </script>
 </body>
 
 </html>
