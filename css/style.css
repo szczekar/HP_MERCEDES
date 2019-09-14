@@ -58,9 +58,9 @@ aside img {
 
 aside .top2 {
   /*  position: relative;*/
-/*  max-width: 100%;*/
+  /*  max-width: 100%;*/
   /*  max-height: 620px;*/
-/*
+  /*
   height: auto;
   margin: 0 auto;
   text-align: center;
@@ -98,9 +98,6 @@ nav a:hover {
   font-weight: normal;
 }
 
-span::first-letter {
-  font-weight: bold;
-}
 
 @media(min-width:360px) {
   nav a {
@@ -459,7 +456,7 @@ span::first-letter {
 .contact .social {
 
   padding: 10px 0;
-  color: white;
+  /*  color: red;*/
   font-family: 'Roboto', sans-serif;
 
 }
@@ -474,8 +471,10 @@ span::first-letter {
   padding-left: 15px;
   float: left;
   font-size: 30px;
+  color: red;
 }
 
+/* footer - stopka */
 
 footer {
   background-color: grey;
@@ -486,10 +485,12 @@ footer {
   font-size: 20px;
 }
 
+/*
 footer::first-letter {
   font-weight: bold;
+  color: red;
 }
-
+*/
 
 @media (min-width:360px) {
   footer {
